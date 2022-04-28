@@ -1,7 +1,7 @@
 from pprint import pprint
 from selenium import webdriver
 from bs4 import BeautifulSoup as bs
-from flask import Flask, render_template, request
+from flask import Flask
 import re, json, time
 
 
@@ -13,9 +13,7 @@ def index():
     options.add_argument("--headless")
     driver = webdriver.Chrome('chromedriver.exe', options = options)
     
-    #shopee_url = "https://shopee.ph/Gigabyte-H410M-H-V3-Socket-LGA-1200-Ddr4-Gaming-Motherboard-Brand-New-DDR4-gaming-motherboard.-i.77398075.10447821049?sp_atk=cd39f3dc-e5b4-4065-9e56-f566fa53f296"
-    shopee_url = "https://shopee.ph/realme-C11-2021-(2-32GB)-i.119485441.6986779215?sp_atk=eb8af231-8741-49aa-b427-bdf747bb9158"
-    #shopee_url = "https://shopee.ph/%E2%9A%A1Flash-Sale%E2%9A%A1-Samsung-Galaxy-A72-Smartphone-Full-Screen-Cellphone-Sale-Original-i.668871889.16629358086?sp_atk=7191f3e8-b47f-41fe-9eb1-3be4f0f7526f&xptdk=7191f3e8-b47f-41fe-9eb1-3be4f0f7526f"
+    shopee_url = "https://shopee.ph/%E2%9A%A1Flash-Sale%E2%9A%A1-Samsung-Galaxy-A72-Smartphone-Full-Screen-Cellphone-Sale-Original-i.668871889.16629358086?sp_atk=7191f3e8-b47f-41fe-9eb1-3be4f0f7526f&xptdk=7191f3e8-b47f-41fe-9eb1-3be4f0f7526f"
     
     
     #INITIALIZE WEB DRIVER AND BS4
@@ -48,7 +46,7 @@ def index():
     
 
     #GET PRODUCT NAME
-    names = soup.find_all("div", {"class": "_3g8My-"})
+    names = soup.find_all("div", {"class": "VCNVHn"})
     for name in names:
         name = name.select_one('span')
         product_name = name.get_text(strip=True)
