@@ -13,8 +13,8 @@ def index():
     options.add_argument("--headless")
     driver = webdriver.Chrome('chromedriver.exe', options = options)
     
-    shopee_url = "https://shopee.ph/%E2%9A%A1Flash-Sale%E2%9A%A1-Samsung-Galaxy-A72-Smartphone-Full-Screen-Cellphone-Sale-Original-i.668871889.16629358086?sp_atk=7191f3e8-b47f-41fe-9eb1-3be4f0f7526f&xptdk=7191f3e8-b47f-41fe-9eb1-3be4f0f7526f"
-    
+    #shopee_url = "https://shopee.ph/%E2%9A%A1Flash-Sale%E2%9A%A1-Samsung-Galaxy-A72-Smartphone-Full-Screen-Cellphone-Sale-Original-i.668871889.16629358086?sp_atk=7191f3e8-b47f-41fe-9eb1-3be4f0f7526f&xptdk=7191f3e8-b47f-41fe-9eb1-3be4f0f7526f"
+    shopee_url = "https://shopee.ph/POCO-X4-Pro-5G-8GB-256GB-Global-Version%E3%80%90In-1-year-Warranty%E3%80%91-i.178878361.11189292849?sp_atk=b944786d-688e-4687-b88b-967b61f00702&xptdk=b944786d-688e-4687-b88b-967b61f00702"
     
     #INITIALIZE WEB DRIVER AND BS4
     driver.get(shopee_url)
